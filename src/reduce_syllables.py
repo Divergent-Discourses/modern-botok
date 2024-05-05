@@ -1,7 +1,10 @@
+import os
+import pandas as pd
+
 # File path
 home_dir = os.getcwd()
-file_path = home_dir + "../dictionary/tsikchen.tsv"
-dict_path = '/your/path/'
+file_path = home_dir + "/dictionary/custom/dictionary/words/tsikchen.tsv"
+dict_path = '/home/yuki/Dropbox/Arbeit/20240112_Divergierende_Diskurse/20240216_POS-Tagger/api/AcTib/dictionary/'
 
 # Read the tab-separated table
 table = pd.read_csv(file_path, sep='\t', dtype='str')[1:]
