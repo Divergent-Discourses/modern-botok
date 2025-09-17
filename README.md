@@ -23,30 +23,39 @@ Botok out-of-the-box can tokenize classical Tibetan text or traditional genres, 
  
 ## How to use
 1. Install BoTok (0.8.13) in terminal:
-```
+```bash/cmd
 pip install git+https://github.com/OpenPecha/Botok
 ```
-2. Run the following code in the console to generate the folder 'general':
-```
-config = Config()
-wt = WordTokenizer(config=config)
-```
-* You can specify the folder in which the folder 'general' is created.
-```
-base_dir = '/your/path/dictionary'
-config = Config(base_path= Path(base_dir))
-config = Config()
-wt = WordTokenizer(config=config)
-```
+2. Generate the folder 'general' by following the next steps:
+
+    2.1 Launch Python in the terminal:
+    ```bash/cmd
+    python
+    Python 3.x.x ...
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>>
+    ```
+    2.2. Run the following code in Python:
+    ```python
+    from pathlib import Path
+    from botok.config import Config
+    from botok import WordTokenizer
+   
+    BASE = Path.home() / "Documents" / "pybo" / "dialect_packs"
+    config = Config(base_path=str(BASE))
+    wt = WordTokenizer(config=config)
+    ```
+    
 3. Open the directory (/Documents/pybo/dialect_packs) in which the folder 'general' is located. 
 4. Copy the folder 'general' and change the folder name into 'custom'.
 5. Replace custom/dictionary/words/tsikchen.tsv with the file of the same name (tsikchen.tsv).
 6. Run the following code to generate custom_trie.pickled:
-```
-config = Config(dialect_name="custom")
-wt = WordTokenizer(config=config)
-```
-7. Run src/example.py:
-```
+    ```python
+    config = Config(dialect_name="custom")
+    wt = WordTokenizer(config=config)
+    exit()
+    ```
+7. Run src/example.py from the directory where this repository is cloned:
+```bash/cmd
 python3 src/example.py
 ```
