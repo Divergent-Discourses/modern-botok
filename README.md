@@ -22,9 +22,9 @@ Botok out-of-the-box can tokenize classical Tibetan text or traditional genres, 
 - The resulting dictionary was cleaned up and edited by the Divergent Discourses project to the project's requirements (removal of double entries, phraseologisms, ungrammatical entries, etc; addition of ca. 1000 personal and place names)
  
 ## How to use
-1. Install BoTok (0.8.13) in terminal:
+1. Install BoTok (0.9.0) in terminal:
 ```bash/cmd
-pip install git+https://github.com/OpenPecha/Botok
+pip install botok==0.9.0
 ```
 2. Generate the folder 'general' by following the next steps:
 
